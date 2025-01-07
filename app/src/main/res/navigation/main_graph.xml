@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.juegos.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_settings_to_settingsBackground2"
+            app:destination="@id/settingsBackground2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.juegos.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_settings"
+            app:destination="@id/settings"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_home2_to_games"
+            app:destination="@id/games"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/games"
+        android:name="com.example.juegos.Games"
+        android:label="fragment_games"
+        tools:layout="@layout/fragment_games" >
+        <action
+            android:id="@+id/action_games_to_espanyola"
+            app:destination="@id/espanyola"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_games_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/espanyola"
+        android:name="com.example.juegos.barajaEspanyola.Espanyola"
+        android:label="fragment_espanyola"
+        tools:layout="@layout/fragment_espanyola" >
+        <action
+            android:id="@+id/action_espanyola_to_espanyolaJugador"
+            app:destination="@id/espanyolaJugador"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/memory"
+        android:name="com.example.juegos.barajaEspanyola.Memory"
+        android:label="fragment_memory"
+        tools:layout="@layout/fragment_memory" >
+        <action
+            android:id="@+id/action_memory_to_home2"
+            app:destination="@id/home2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/espanyolaJugador"
+        android:name="com.example.juegos.barajaEspanyola.EspanyolaMemoryJugador"
+        android:label="fragment_espanyola_jugador"
+        tools:layout="@layout/fragment_espanyola_jugador" >
+        <action
+            android:id="@+id/action_espanyolaJugador_to_memory"
+            app:destination="@id/memory"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/settingsBackground2"
+        android:name="com.example.juegos.SettingsBackground"
+        android:label="fragment_settings_background"
+        tools:layout="@layout/fragment_settings_background" >
+        <action
+            android:id="@+id/action_settingsBackground2_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+</navigation>

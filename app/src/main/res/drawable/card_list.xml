@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/card_01"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_02"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_03"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_04"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_05"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_06"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_07"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_08"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_09"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/card_10"
+        android:duration="200"/>
+
+    <item
+        android:drawable="@drawable/card_11"
+        android:duration="200"/>
+
+
+</animation-list>

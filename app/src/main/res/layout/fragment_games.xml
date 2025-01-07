@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/games"
+    tools:context=".Games"
+    android:background="@drawable/gradient_list">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Juegos de cartas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/espanyol"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/houstonville"
+        />
+
+    <Button
+        android:id="@+id/espanyol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baraja Española"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/houstonville"
+        />
+
+    <Button
+        android:id="@+id/inglesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baraja Inglesa"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/espanyol"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/houstonville"
+        />
+
+    <Button
+        android:id="@+id/virus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Virus"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inglesa"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/houstonville"
+        />
+
+    <Button
+        android:id="@+id/volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/virus"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/houstonville"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
