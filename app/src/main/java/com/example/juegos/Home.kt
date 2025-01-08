@@ -35,16 +35,16 @@ class Home : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        animacion()
-        musica()
+        //animacion()
         navegacion()
-
 
         binding.boton3.setOnClickListener {
             if (mediaPlayer.isPlaying) {
                 mediaPlayer.stop()
                 mediaPlayer.release()
+
             }
+            activity?.finishAndRemoveTask()
         }
 
         sharedViewModel.selectedBackground.observe(viewLifecycleOwner) { backgroundResId ->
@@ -64,12 +64,12 @@ class Home : Fragment() {
         }
     }
 
-    fun animacion() {
+    /*fun animacion() {
         val animationDrawable = binding.home.background as AnimationDrawable
         animationDrawable.setEnterFadeDuration(2500)
         animationDrawable.setExitFadeDuration(2500)
         animationDrawable.start()
-    }
+    } */
 
     fun imagenFondo() {
 
@@ -77,12 +77,6 @@ class Home : Fragment() {
         if (savedBackground != 0) {
             view?.setBackgroundResource(savedBackground)
         }
-    }
-
-    fun musica() {
-        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.jazz)
-        mediaPlayer.isLooping = true
-        mediaPlayer.start()
     }
 
     fun navegacion() {

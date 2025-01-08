@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/settings"
-        android:name="com.example.juegos.Settings"
+        android:name="com.example.juegos.settings.Settings"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_settings_to_settingsBackground2"
             app:destination="@id/settingsBackground2" />
+        <action
+            android:id="@+id/action_settings_to_settingsMusic2"
+            app:destination="@id/settingsMusic2" />
     </fragment>
     <fragment
         android:id="@+id/home2"
@@ -82,11 +85,19 @@
     </fragment>
     <fragment
         android:id="@+id/settingsBackground2"
-        android:name="com.example.juegos.SettingsBackground"
+        android:name="com.example.juegos.settings.SettingsBackground"
         android:label="fragment_settings_background"
         tools:layout="@layout/fragment_settings_background" >
         <action
             android:id="@+id/action_settingsBackground2_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsMusic2"
+        android:name="com.example.juegos.settings.SettingsMusic"
+        android:label="SettingsMusic" >
+        <action
+            android:id="@+id/action_settingsMusic2_to_settings"
             app:destination="@id/settings" />
     </fragment>
 </navigation>

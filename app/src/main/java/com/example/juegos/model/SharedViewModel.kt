@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 
 class SharedViewModel : ViewModel() {
     private val _selectedBackground = MutableLiveData<Int>()
+
     val selectedBackground: LiveData<Int> get() = _selectedBackground
 
     fun selectBackground(background: Int) {

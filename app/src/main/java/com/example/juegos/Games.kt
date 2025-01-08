@@ -39,19 +39,14 @@ class Games : Fragment() {
             prefs.saveBackground(backgroundResId)
         }
 
-        animacion()
+        /*animacion()*/
         imagenFondo()
         navegacion()
     }
 
 
 
-    fun animacion() {
-        val animationDrawable = binding.games.background as AnimationDrawable
-        animationDrawable.setEnterFadeDuration(2500)
-        animationDrawable.setExitFadeDuration(2500)
-        animationDrawable.start()
-    }
+
 
     fun imagenFondo() {
 

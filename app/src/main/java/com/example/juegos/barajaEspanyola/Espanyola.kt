@@ -6,14 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.juegos.R
 import com.example.juegos.databinding.FragmentEspanyolaBinding
+import com.example.juegos.model.SharedViewModel
+import com.example.juegos.pref.Prefs
 
 class Espanyola : Fragment() {
 
     private var _binding : FragmentEspanyolaBinding? = null
     private val  binding get() = _binding!!
+    private lateinit var sharedViewModel: SharedViewModel
+    private lateinit var prefs: Prefs
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,11 +26,7 @@ class Espanyola : Fragment() {
     ): View? {
 
         _binding = FragmentEspanyolaBinding.inflate(inflater,container,false)
-
-        val animationDrawable = binding.games.background as AnimationDrawable
-        animationDrawable.setEnterFadeDuration(2500)
-        animationDrawable.setExitFadeDuration(2500)
-        animationDrawable.start()
+        sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
         binding.memory.setOnClickListener {
 

@@ -60,12 +60,7 @@ class Memory : Fragment() {
     fun actualizarPuntuacion() {
         binding.puntuacion.text = "Puntuación: $puntuacion"
     }
-    fun fondoAnimacion() {
-        val animationDrawable = binding.memory.background as AnimationDrawable
-        animationDrawable.setEnterFadeDuration(2500)
-        animationDrawable.setExitFadeDuration(2500)
-        animationDrawable.start()
-    }
+
     fun volverInicio() {
         binding.salir.setOnClickListener {
             findNavController().navigate(R.id.action_memory_to_home2)
@@ -198,7 +193,6 @@ class Memory : Fragment() {
     }
 
     fun init() {
-        fondoAnimacion()
         volverInicio()
 
             cargarTablero()

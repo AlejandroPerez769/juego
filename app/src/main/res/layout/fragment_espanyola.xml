@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/games"
     tools:context=".Games"
-    android:background="@drawable/gradient_list">
+    tools:background="@drawable/gradient_list">
 
     <TextView
         android:id="@+id/titulo"
@@ -35,6 +35,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titulo"
         android:layout_marginTop="80dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/houstonville"
+        />
+
+    <Button
+        android:id="@+id/culo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Culo"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/memory"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/houstonville"
+        />
+
+    <Button
+        android:id="@+id/ramundino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ramundino"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/culo"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="32sp"

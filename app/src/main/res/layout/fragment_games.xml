@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/games"
     tools:context=".Games"
-    android:background="@drawable/gradient_list">
+    tools:background="@drawable/gradient_list">
 
     <TextView
         android:id="@+id/titulo"

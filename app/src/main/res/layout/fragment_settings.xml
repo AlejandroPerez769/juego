@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Settings"
+    tools:context=".settings.Settings"
     android:background="@drawable/settings_background">
 
     <TextView
@@ -61,6 +61,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/lin2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -94,6 +95,43 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lin2"
+        android:layout_margin="40dp">
+        <TextView
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Música: "
+            android:layout_marginEnd="50dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/houstonville"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/encApa"/>
+
+        <Button
+            android:id="@+id/cambiar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/houstonville"
+            android:textSize="32sp"
+            app:layout_constraintStart_toEndOf="@id/volver"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/volver"
