@@ -82,6 +82,11 @@
             app:destination="@id/memory"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_espanyolaJugador_to_memory2Players"
+            app:destination="@id/memory2Players"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/settingsBackground2"
@@ -90,7 +95,9 @@
         tools:layout="@layout/fragment_settings_background" >
         <action
             android:id="@+id/action_settingsBackground2_to_settings"
-            app:destination="@id/settings" />
+            app:destination="@id/settings"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/settingsMusic2"
@@ -99,5 +106,14 @@
         <action
             android:id="@+id/action_settingsMusic2_to_settings"
             app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/memory2Players"
+        android:name="com.example.juegos.barajaEspanyola.Memory2Players"
+        android:label="fragment_memory2_players"
+        tools:layout="@layout/fragment_memory2_players">
+        <action
+            android:id="@+id/action_memory2Players_to_home2"
+            app:destination="@id/home2" />
     </fragment>
 </navigation>

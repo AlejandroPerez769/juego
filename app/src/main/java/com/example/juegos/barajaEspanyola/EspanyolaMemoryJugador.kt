@@ -34,6 +34,10 @@ class EspanyolaMemoryJugador : Fragment() {
 
             findNavController().navigate(R.id.action_espanyolaJugador_to_memory)
         }
+        binding.twoPlayer.setOnClickListener {
+
+            findNavController().navigate(R.id.action_espanyolaJugador_to_memory2Players)
+        }
 
 
         return binding.root

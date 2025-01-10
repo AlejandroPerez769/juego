@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun playMusic(songResId: Int) {
+     fun playMusic(songResId: Int) {
         if (mediaPlayer != null) {
             mediaPlayer!!.stop()
             mediaPlayer!!.release()
@@ -80,6 +80,15 @@ class MainActivity : AppCompatActivity() {
     fun changeMusic(songResId: Int) {
         prefs.saveSong(songResId)
         playMusic(songResId)
+    }
+
+    fun stopMusic() {
+
+        if (mediaPlayer != null) {
+            mediaPlayer!!.stop()
+            mediaPlayer!!.release()
+        }
+
     }
 
 
