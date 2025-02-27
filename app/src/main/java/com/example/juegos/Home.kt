@@ -88,5 +88,13 @@ class Home : Fragment() {
         binding.boton2.setOnClickListener {
             findNavController().navigate(R.id.action_home2_to_settings)
         }
+
+        binding.boton22.setOnClickListener {
+            findNavController().navigate(R.id.action_home2_to_login)
+        }
+
+        binding.boton23.setOnClickListener {
+            findNavController().navigate(R.id.action_home2_to_chat2)
+        }
     }
 }

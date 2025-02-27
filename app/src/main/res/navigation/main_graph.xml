@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_settings_to_settingsMusic2"
             app:destination="@id/settingsMusic2" />
+        <action
+            android:id="@+id/action_settings_to_history"
+            app:destination="@id/history" />
     </fragment>
     <fragment
         android:id="@+id/home2"
@@ -35,6 +38,12 @@
             app:destination="@id/games"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_home2_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_home2_to_chat2"
+            app:destination="@id/chat2" />
     </fragment>
     <fragment
         android:id="@+id/games"
@@ -60,6 +69,9 @@
             app:destination="@id/espanyolaJugador"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/action_espanyola_to_espanyolaSieteJugador"
+            app:destination="@id/espanyolaSieteJugador" />
     </fragment>
     <fragment
         android:id="@+id/memory"
@@ -76,7 +88,7 @@
         android:id="@+id/espanyolaJugador"
         android:name="com.example.juegos.barajaEspanyola.EspanyolaMemoryJugador"
         android:label="fragment_espanyola_jugador"
-        tools:layout="@layout/fragment_espanyola_jugador" >
+        tools:layout="@layout/fragment_espanyola_jugador_memory" >
         <action
             android:id="@+id/action_espanyolaJugador_to_memory"
             app:destination="@id/memory"
@@ -114,6 +126,50 @@
         tools:layout="@layout/fragment_memory2_players">
         <action
             android:id="@+id/action_memory2Players_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/espanyolaSieteJugador"
+        android:name="com.example.juegos.barajaEspanyola.EspanyolaSieteJugador"
+        android:label="fragment_espanyola_siete_jugador"
+        tools:layout="@layout/fragment_espanyola_siete_jugador" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.juegos.settings.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_login_to_register2"
+            app:destination="@id/register2" />
+    </fragment>
+    <fragment
+        android:id="@+id/register2"
+        android:name="com.example.juegos.settings.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register2_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.example.juegos.settings.History"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_history_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/chat2"
+        android:name="com.example.juegos.Chat"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chat2_to_home2"
             app:destination="@id/home2" />
     </fragment>
 </navigation>

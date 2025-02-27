@@ -12,11 +12,11 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Baraja española"
+        android:text="Siete y medio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/memory"
+        app:layout_constraintBottom_toTopOf="@id/onePlayer"
         android:layout_marginTop="80dp"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -26,10 +26,10 @@
         />
 
     <Button
-        android:id="@+id/memory"
+        android:id="@+id/onePlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Memory"
+        android:text="Un jugador"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,15 +41,17 @@
         android:layout_gravity="center"
         android:fontFamily="@font/houstonville"
         />
+
     <Button
-        android:id="@+id/sietemedio"
+        android:id="@+id/twoPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Siete y medio"
+        android:text="Dos jugadores"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/memory"
+        app:layout_constraintTop_toBottomOf="@id/onePlayer"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="32sp"
@@ -58,30 +60,15 @@
         />
 
     <Button
-        android:id="@+id/culo"
+        android:id="@+id/iaPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Culo"
+        android:text="Contra IA"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sietemedio"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="32sp"
-        android:layout_gravity="center"
-        android:fontFamily="@font/houstonville"
-        />
-
-    <Button
-        android:id="@+id/ramundino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ramundino"
-        android:background="@android:color/transparent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/culo"
+        app:layout_constraintTop_toBottomOf="@id/twoPlayer"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="32sp"

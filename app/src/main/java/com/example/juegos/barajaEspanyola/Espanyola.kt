@@ -32,6 +32,10 @@ class Espanyola : Fragment() {
 
             findNavController().navigate(R.id.action_espanyola_to_espanyolaJugador)
         }
+        binding.sietemedio.setOnClickListener {
+
+            findNavController().navigate(R.id.action_espanyola_to_espanyolaSieteJugador)
+        }
 
 
         return binding.root

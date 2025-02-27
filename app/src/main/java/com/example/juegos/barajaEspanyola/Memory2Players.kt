@@ -132,6 +132,7 @@ class Memory2Players : Fragment() {
     }
     fun comprobar(i: Int,imag: ImageButton) {
 
+
         if (primero == null) {
             primero = imag
             primero!!.setScaleType(ImageView.ScaleType.CENTER_CROP)
@@ -147,6 +148,7 @@ class Memory2Players : Fragment() {
             numSegundo = arrayDesordenado.get(i)
 
 
+
             if (numPrimero == numSegundo) {
                 println(numPrimero)
                 primero = null
@@ -156,6 +158,7 @@ class Memory2Players : Fragment() {
                 if (turnos) {
                     puntuacionJug1++
                     puntuacionJug1++
+
                 }
                 else {
                     puntuacionJug2++
@@ -166,7 +169,13 @@ class Memory2Players : Fragment() {
                 actualizarPuntuacion()
 
                 if (aciertos == cartas.size) run {
-                    var toast: Toast = Toast.makeText(context, "Has ganado", Toast.LENGTH_LONG)
+
+                    var mensaje : String
+
+                    if (puntuacionJug1 > puntuacionJug2)  mensaje = "Ha ganado el jugador 1" else mensaje = "Ha ganado el jugador 2"
+                    var toast: Toast
+                    toast = Toast.makeText(context, mensaje, Toast.LENGTH_LONG)
+
                     toast.show()
                 }
 
@@ -187,16 +196,27 @@ class Memory2Players : Fragment() {
                         turnos = false
                         binding.turno?.setText("Turno del jugador 2")
                         binding.turno?.setTextColor(Color.parseColor("#F44336"))
+                        binding.jugador1.setTextColor(Color.parseColor("#FFFFFF"))
                     }
                     else {
                         puntuacionJug2--
                         turnos = true
                         binding.turno?.setText("Turno del jugador 1")
                         binding.turno?.setTextColor(Color.parseColor("#2196F3"))
+                        binding.jugador2.setTextColor(Color.parseColor("#FFFFFF"))
                     }
 
 
                     actualizarPuntuacion()
+
+                    if (turnos == false) {
+
+                        binding.jugador2?.setTextColor(Color.parseColor("#F44336"))
+                    } else {
+
+                        binding.jugador1?.setTextColor(Color.parseColor("#2196F3"))
+                    }
+
                 },1000)
             }
 

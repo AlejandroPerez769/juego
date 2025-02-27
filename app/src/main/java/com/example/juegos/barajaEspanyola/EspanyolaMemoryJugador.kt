@@ -9,14 +9,15 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.juegos.R
-import com.example.juegos.databinding.FragmentEspanyolaJugadorBinding
+import com.example.juegos.databinding.FragmentEspanyolaJugadorMemoryBinding
+import com.example.juegos.databinding.FragmentMemoryBinding
 import com.example.juegos.model.SharedViewModel
 import com.example.juegos.pref.Prefs
 
 
 class EspanyolaMemoryJugador : Fragment() {
 
-    private var _binding : FragmentEspanyolaJugadorBinding? = null
+    private var _binding : FragmentEspanyolaJugadorMemoryBinding? = null
     private val  binding get() = _binding!!
     private lateinit var sharedViewModel: SharedViewModel
     private lateinit var prefs: Prefs
@@ -26,7 +27,7 @@ class EspanyolaMemoryJugador : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentEspanyolaJugadorBinding.inflate(inflater,container,false)
+        _binding = FragmentEspanyolaJugadorMemoryBinding.inflate(inflater,container,false)
         sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
 

@@ -90,5 +90,9 @@ class Settings : Fragment() {
             findNavController().navigate(R.id.action_settings_to_settingsMusic2)
         }
 
+        binding.historial.setOnClickListener {
+            findNavController().navigate(R.id.action_settings_to_history)
+        }
+
     }
 }
